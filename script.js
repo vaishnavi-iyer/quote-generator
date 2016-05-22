@@ -2,17 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {// to make syre script
 
   // All your code goes here... functions, variables, everything!
   loadQuote();
+  document.getElementById('quote-button').addEventListener('click', function(){
+    console.log("click detected");
+    loadQuote();
+  });
 });
-var thoughts = [
-{"quote": "fhjgfhkhjgkjhkj",
-"from": "ghfghjfghjf"},
-{"quote": "fhjgfhkhjgkjhkj",
-"from": "ghfghjfghjf"},
-{"quote": "fhjgfhkhjgkjhkj",
-"from": "ghfghjfghjf"},
-{"quote": "fhjgfhkhjgkjhkj",
-"from": "ghfghjfghjf"}
 
+
+
+var thoughts = [
+{"quote": "afhjgfhkhjgkjhkj",
+"from": "ghfghjfghjf"},
+{"quote": "bfhjgfhkhjgkjhkj",
+"from": "ghfghjfghjf"},
+{"quote": "cfhjgfhkhjgkjhkj",
+"from": "ghfghjfghjf"},
+{"quote": "dfhjgfhkhjgkjhkj",
+"from": "ghfghjfghjf"}
 ];
 function loadQuote ()  // function to load a new quote
 {
