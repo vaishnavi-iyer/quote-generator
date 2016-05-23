@@ -1,7 +1,7 @@
 html, body{
   /*height: 100%;*/
   font-family: 'Linden Hill', serif;
-  width: 70%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -10,8 +10,9 @@ html, body{
 }
 
 .quote-container{
-  margin-top: 150px;
+  margin-top: 75px;
   position: relative;
+  display: inline;
 }
 
 .quote-text{
@@ -32,6 +33,12 @@ html, body{
 #quote-button{
   background-color: #2f3d4f;
   border: none;
+  height: 50px;
+}
+
+#tweet{
+  width: 50px;
+  height: 50px
 }
 
 #footer {
