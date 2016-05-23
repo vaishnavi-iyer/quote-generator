@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {// to make syre script s excuted after DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {// to make sure script is excuted after DOM is loaded
 
-  // All your code goes here... functions, variables, everything!
-  loadQuote();
+  loadQuote(); // to load the quote when page is populated
+
+  // detecting the click and load a new quote
   document.getElementById('quote-button').addEventListener('click', function(){
     console.log("click detected");
     loadQuote();
@@ -36,15 +37,15 @@ var lastQuoteNum, tweetLink;
 
 function loadQuote ()  // function to load a new quote
 {
-  var quoteNum = Math.floor(Math.random()*(thoughts.length));    /// to generate a random quote number
-  if(lastQuoteNum===quoteNum)
+  var quoteNum = Math.floor(Math.random()*(thoughts.length));    // to generate a random quote number
+  if(lastQuoteNum===quoteNum)  // if random number  be the same then incrementing it to make it different
     quoteNum++;
   console.log(thoughts[quoteNum])
-  $("#quote").empty().append(thoughts[quoteNum].quote);
+  $("#quote").empty().append(thoughts[quoteNum].quote);  //display the quote in the page
   $("#from").empty().append(thoughts[quoteNum].from);
   //document.getElementById('quote').innerHTML = thoughts[quoteNum].quote; // using js
 
-  lastQuoteNum = quoteNum
+  lastQuoteNum = quoteNum; // to make sure its truly random
 
   tweetLink = "https://twitter.com/intent/tweet?hashtags=thoughtoftheday&text=" + thoughts[quoteNum].quote + " - " + thoughts[quoteNum].from;
 }
